@@ -51,7 +51,7 @@ export default function ProblemCard({ problem }) {
         <p className="text-gray-500 mt-1 text-sm">Location: {problem.location}</p>
         {problem.image && (
           <img
-            src={`http://localhost:5000/uploads/${problem.image}`}
+            src={`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/uploads/${problem.image}`}
             alt={problem.title}
             className="mt-3 rounded-md w-full object-cover max-h-80"
           />

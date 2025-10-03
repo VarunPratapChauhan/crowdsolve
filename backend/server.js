@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-connectDB(process.env.MONGO_URI || "mongodb://localhost:27017/crowdsolve");
+connectDB(process.env.MONGO_URI);
 
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/problems", require("./routes/problems"));
